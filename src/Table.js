@@ -64,7 +64,7 @@ class Table extends React.Component{
                 let imgs = [];
                 for(let x in e.posters){
                     const {url, username} = this.getIconUrl(e.posters[x].user_id);
-                    imgs.push(<a href={FCC+"u/"+username}><img src={url}/></a>);
+                    imgs.push(<a href={FCC+"u/"+username} key={Math.random()}><img src={url}/></a>);
                 }
                 return (
                 <div className="row body" key={i}>

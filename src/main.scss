@@ -30,6 +30,8 @@ a{
 }
 
 .row{
+    animation: enter 0.5s;
+    animation-timing-function: ease-in-out;
     box-shadow: 0 0 2px 1px lighten($default, 55%);
     margin: 4px;
     min-height: 40px;
@@ -90,6 +92,17 @@ a{
 }
 .row.body div:nth-child(5){
     border-right: none;
+}
+
+@keyframes enter{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
